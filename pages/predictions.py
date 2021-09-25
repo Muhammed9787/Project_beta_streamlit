@@ -1,7 +1,6 @@
 # big data
 # python libraries
 from datetime import datetime, timedelta
-import json
 import itertools
 import time
 import os
