@@ -66,7 +66,7 @@ def app():
     st.write(e)
 
 def plot_logarithmic(notification_percentual):
-  plt.rcParams["font.family"] = "Times New Roman"
+#   plt.rcParams["font.family"] = "Times New Roman"
   plt.rcParams["font.size"] = "8"
   plt.rcParams['axes.grid'] = True
   # filter target data
