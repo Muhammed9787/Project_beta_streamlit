@@ -14,7 +14,7 @@ import plotly.express as px
 import plotly.graph_objs as go
 import pylab
 import seaborn as sns
-from PIL import Image
+# from PIL import Image
 from IPython.display import HTML as html_print
 # machine learning libraries
 import scipy
