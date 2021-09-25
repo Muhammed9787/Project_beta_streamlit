@@ -2,7 +2,7 @@
 
 import streamlit as st
 import mysql.connector
-
+def app():
 # Initialize connection.
 # Uses st.cache to only run once.
 @st.cache(allow_output_mutation=True, hash_funcs={"_thread.RLock": lambda _: None})
