@@ -229,7 +229,7 @@ def app():
              unsafe_allow_html=True)
 
     confirmed_df, death_df, recovery_df = wwConfirmedDataCollection()
-    st.title("Covid-19 🦠 Pandemic Data Visualization")
+    st.title("Covid-19 Pandemic Data Visualization")
     # displayRawData(confirmed_df, death_df, recovery_df)
     confirmed_df, death_df, recovery_df = dataMassaging(
         confirmed_df, death_df, recovery_df
