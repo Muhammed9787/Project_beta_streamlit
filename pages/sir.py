@@ -22,7 +22,7 @@ def app():
 
     rows = run_query("SELECT * from Dataframe;")
     df = pd.DataFrame(rows)
-    df.rename(columns={'0': 'day', '1': 'deaths','2':'cases'})
+    df.rename(columns={'0': 'day', '1': 'deaths','2':'cases'},inplace=true)
     st.write(df)
 
     # Print results.
