@@ -23,7 +23,7 @@ from scipy.optimize import curve_fit
 from scipy.optimize import fsolve
 # app
 import streamlit as st
-import pages.sir.py
+
 # APP
 def app():
   # Add a title
