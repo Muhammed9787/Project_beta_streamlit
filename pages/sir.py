@@ -2,6 +2,7 @@
 
 import streamlit as st
 import mysql.connector
+import pandas as pd
 def app():
     # Initialize connection.
     # Uses st.cache to only run once.
