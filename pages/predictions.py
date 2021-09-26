@@ -23,8 +23,7 @@ from scipy.optimize import curve_fit
 from scipy.optimize import fsolve
 # app
 import streamlit as st
-from pages import sir
-
+import sir.py
 
 # APP
 def app():
