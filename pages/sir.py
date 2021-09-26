@@ -22,7 +22,9 @@ def app():
 
     rows = run_query("SELECT * from Dataframe;")
     df = pd.DataFrame(rows)
-    df = df.set_axis(['day', 'deaths', 'cases'], axis=1, inplace=False)    
+    df = df.set_axis(['day', 'deaths', 'cases'], axis=1, inplace=False)
+    cases_df=df['day','cases']
+    st.write(cases_df)
     st.write(df)
 
     # Print results.
