@@ -21,9 +21,13 @@ def app():
             return cur.fetchall()
 
     rows = run_query("SELECT * from Dataframe;")
+    cases = run_query("SELECT date , cases from Dataframe;")
+    deaths = run_query("SELECT date , deaths from Dataframe;")
+    cases_df = pd.DataFrame(cases)
+    deaths_df = pd.DataFrame(deaths)
+
     df = pd.DataFrame(rows)
     df = df.set_axis(['day', 'deaths', 'cases'], axis=1, inplace=False)
-    cases_df=df['day','cases']
     st.write(cases_df)
     st.write(df)
 
