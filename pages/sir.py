@@ -21,7 +21,7 @@ def app():
             return cur.fetchall()
 
     rows = run_query("SELECT * from mytable;")
-    df = pd.read_sql_query(rows)
+    df = pd.read_sql_query(rows,con=conn)
     st.write(df)
 
     # Print results.
