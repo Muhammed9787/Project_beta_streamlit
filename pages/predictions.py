@@ -23,6 +23,7 @@ from scipy.optimize import curve_fit
 from scipy.optimize import fsolve
 # app
 import streamlit as st
+import SIR
 
 
 
@@ -88,12 +89,12 @@ def plot_logarithmic(notification_percentual):
 # here we get the main dataframe
 def timeline_of_cases_and_deaths(notification_percentual):
 
-  cases_df = pd.read_excel('cases.xlsx')
+  cases_df = SIR.cases_df
   # apply subnotification percentage
   # if none was entered, it is == 1
   cases_df.cases = cases_df.cases*100/notification_percentual
   # create dataframes for deaths
-  deaths_df = pd.read_excel('deaths.xlsx')
+  deaths_df = SIR.deaths_df
  
   # merge into one single dataframe
   df = cases_df.merge(deaths_df, on='day')
