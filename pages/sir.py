@@ -20,10 +20,10 @@ def app():
             cur.execute(query)
             return cur.fetchall()
 
-    rows = run_query("SELECT * from mytable;")
-    df = pd.read_sql(rows,con=conn)
+    rows = run_query("SELECT * from Dataframe;")
+    df = pd.DataFrame(rows)
     st.write(df)
 
     # Print results.
-    for row in rows:
-        st.write(f"{row[0]} has a :{row[1]}:")
+#     for row in rows:
+#         st.write(f"{row[0]} has a :{row[1]}:")
