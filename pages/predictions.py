@@ -1,6 +1,6 @@
 # big data
 # python libraries
-import pages.sir
+import pages.sir as sir
 from datetime import datetime, timedelta
 import itertools
 import time
