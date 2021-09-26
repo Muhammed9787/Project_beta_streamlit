@@ -25,6 +25,9 @@ def app():
     deaths = run_query("SELECT date , deaths from Dataframe;")
     cases_df = pd.DataFrame(cases)
     deaths_df = pd.DataFrame(deaths)
+    cases_df = cases_df.set_axis(['day',  'cases'], axis=1, inplace=False)
+    deaths_df = deaths_df.set_axis(['day', 'deaths'], axis=1, inplace=False)
+
 
     df = pd.DataFrame(rows)
     df = df.set_axis(['day', 'deaths', 'cases'], axis=1, inplace=False)
