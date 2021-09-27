@@ -69,7 +69,7 @@ def plot_logarithmic(notification_percentual):
   plt.rcParams["font.size"] = "8"
   plt.rcParams['axes.grid'] = True
   # filter target data
-  cases_df = pd.read_excel('cases.xlsx')
+  cases_df = sir.cases_df
 
   # apply subnotification percentage
   # if none was entered, it is == 1
@@ -160,7 +160,6 @@ def print_prediction(df, label, column = 'cases'):
 
 def add_real_data(df, label,column = 'cases', color=None):
     x = df['day'].tolist()
-    st.write(x)
     y = df[column].tolist()
     plt.scatter(x, y, label="Data (" + label + ")", c=color)
     return x , y
@@ -198,7 +197,6 @@ def prediction_of_maximum_cases(df, notification_percentual):
 
   # add_logistic_curve(df[:-2], "2 days ago", dashes=[8, 8])
   x, _, speed, x_peak, y_max, _, _, end, _ = predict_logistic_maximum(df[:-2], column='cases')
-  st.write(x)
   x_range = list(range(min(x), end))
   plt.plot(x_range,
              [logistic_model(i, speed, x_peak, y_max) for i in x_range],
