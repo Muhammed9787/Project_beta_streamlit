@@ -4,7 +4,7 @@ import numpy as np
 
 # Custom imports 
 from multipage import MultiPage
-from pages import predictions ,sir# import your pages here
+from pages import predictions # import your pages here
 
 # Create an instance of the app 
 app = MultiPage()
@@ -24,7 +24,7 @@ app = MultiPage()
 #app.add_page("Machine Learning", machine_learning.app)
 # app.add_page("Dashboard",dashboard.app)
 app.add_page("Covid-19 Predictions in Sudan",predictions.app)
-app.add_page("SIR",sir.app)
+# app.add_page("SIR",sir.app)
 
 
 
