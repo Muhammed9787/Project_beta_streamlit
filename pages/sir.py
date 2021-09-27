@@ -31,8 +31,8 @@ deaths_df = deaths_df.set_axis(['day', 'deaths'], axis=1, inplace=False)
 
 df = pd.DataFrame(rows)
 df = df.set_axis(['day', 'deaths', 'cases'], axis=1, inplace=False)
-st.write(cases_df)
-st.write(df)
+# st.write(cases_df)
+# st.write(df)
 
 # Print results.
 #     for row in rows:
