@@ -103,6 +103,8 @@ def timeline_of_cases_and_deaths(notification_percentual):
   # time format
   FMT = "%Y-%m-%dT%H:%M:%SZ"
   # strip and correct timelines
+  df['day'] = df['day'].dt.strftime('%Y-%m-%dT%H:%M:%SZ')
+
   df['day'] = df['day'].map(lambda x: (datetime.strptime(x, FMT) - first_day).days)
   # bring steramlit to the stage
   st.header('Timeline of cases and deaths')
