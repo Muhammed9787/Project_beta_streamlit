@@ -4,7 +4,7 @@ import numpy as np
 
 # Custom imports 
 from multipage import MultiPage
-from pages import predictions # import your pages here
+from pages import predictions,dashboard # import your pages here
 
 # Create an instance of the app 
 app = MultiPage()
