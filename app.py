@@ -22,8 +22,8 @@ app = MultiPage()
 #app.add_page("Upload Data", data_upload.app)
 #app.add_page("Change Metadata", metadata.app)
 #app.add_page("Machine Learning", machine_learning.app)
-# app.add_page("Dashboard",dashboard.app)
-app.add_page("Covid-19 Predictions in Sudan",predictions.app)
+app.add_page("Dashboard",dashboard.app)
+# app.add_page("Covid-19 Predictions in Sudan",predictions.app)
 # app.add_page("SIR",sir.app)
 
 
